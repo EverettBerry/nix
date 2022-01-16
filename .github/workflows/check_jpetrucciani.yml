@@ -1,0 +1,11 @@
+name: check for jpetrucciani updates
+on: {workflow_dispatch, schedule: [cron: '0 2 * * *']}
+jobs:
+  jpetrucciani:
+    uses: EverettBerry/nix/.github/workflows/check_update.yml@main
+    with:
+      tag: jpetrucciani
+      command: nix_hash_jpetrucciani
+      path: ./sources/jpetrucciani.json
+    secrets:
+      pat: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

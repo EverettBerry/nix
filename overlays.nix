@@ -25,7 +25,7 @@
                 owner = "jpetrucciani";
                 repo = "nix";
               }
-              { });
+              ) { };
         }
       ))
   (prev: next: {

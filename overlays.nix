@@ -29,7 +29,7 @@
       ))
   (prev: next: {
     _nix_hash = with next; with hax; repo: branch: name: (
-      writeBashBinChecked "nix_hash_${name}" ''
+      writeShellScriptBin "nix_hash_${name}" ''
         ${nix-prefetch-git}/bin/nix-prefetch-git \
           --quiet \
           --no-deepClone \

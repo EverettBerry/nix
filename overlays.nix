@@ -16,6 +16,7 @@
           isNixDarwin = builtins.getEnv "NIXDARWIN_CONFIG" != "";
 
           attrIf = check: name: if check then name else null;
+          words = splitString " ";
 
           jpetrucciani = with builtins; fromJSON (readFile ./sources/jpetrucciani.json);
           cobi = import (

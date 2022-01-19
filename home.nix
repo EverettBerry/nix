@@ -173,6 +173,11 @@ with pkgs.hax; {
 
         # sounds
         # cobi.hax.meme_sounds
+
+        (writeShellScriptBin "hms" ''
+          ${pkgs.git}/bin/git -C ~/.config/nixpkgs/ pull origin main
+          home-manager switch
+        '')
       ];
   };
 
@@ -206,6 +211,8 @@ with pkgs.hax; {
     initExtra = ''
       HISTCONTROL=ignoreboth
       set +h
+      # fix for weird ubuntu error
+      export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
       export PATH="$PATH:$HOME/.bin/"
       export PATH="$PATH:$HOME/.npm/bin/"
 

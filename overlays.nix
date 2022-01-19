@@ -20,7 +20,7 @@
 
           jpetrucciani = with builtins; fromJSON (readFile ./sources/jpetrucciani.json);
           cobi = import (
-            next.pkgs.fetchFromGitHub
+            fetchFromGitHub
               {
                 inherit (jpetrucciani) rev sha256;
                 owner = "jpetrucciani";

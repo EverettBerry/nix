@@ -24,8 +24,7 @@
                 inherit (jpetrucciani) rev sha256;
                 owner = "jpetrucciani";
                 repo = "nix";
-              }
-              ) { };
+              });
         }
       ))
   (prev: next: {

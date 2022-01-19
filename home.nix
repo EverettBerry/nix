@@ -161,10 +161,10 @@ with pkgs.hax; {
         kubectx
 
         # load in my custom checked bash scripts
-        cobi.hax.aws_bash_scripts
-        cobi.hax.general_bash_scripts
-        cobi.hax.docker_bash_scripts
-        cobi.hax.k8s_bash_scripts
+        # cobi.hax.aws_bash_scripts
+        # cobi.hax.general_bash_scripts
+        # cobi.hax.docker_bash_scripts
+        # cobi.hax.k8s_bash_scripts
 
         # overlays
         nix_hash_unstable
@@ -172,7 +172,7 @@ with pkgs.hax; {
         nix_hash_hm
 
         # sounds
-        cobi.hax.meme_sounds
+        # cobi.hax.meme_sounds
       ];
   };
 

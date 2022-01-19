@@ -15,6 +15,8 @@
           isUbuntu = isLinux && (builtins.match ".*ID=ubuntu.*" (builtins.readFile /etc/os-release)) == [ ];
           isNixDarwin = builtins.getEnv "NIXDARWIN_CONFIG" != "";
 
+          attrIf = check: name: if check then name else null;
+
           jpetrucciani = with builtins; fromJSON (readFile ../sources/jpetrucciani.json);
           cobi = import (
             next.pkgs.fetchFromGitHub {

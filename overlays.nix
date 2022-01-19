@@ -17,7 +17,7 @@
 
           attrIf = check: name: if check then name else null;
 
-          jpetrucciani = with builtins; fromJSON (readFile ../sources/jpetrucciani.json);
+          jpetrucciani = with builtins; fromJSON (readFile ./sources/jpetrucciani.json);
           cobi = import (
             next.pkgs.fetchFromGitHub {
               inherit (jpetrucciani) rev sha256;

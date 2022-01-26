@@ -17,15 +17,6 @@
 
           attrIf = check: name: if check then name else null;
           words = splitString " ";
-
-          jpetrucciani = with builtins; fromJSON (readFile ./sources/jpetrucciani.json);
-          cobi = import (
-            fetchFromGitHub
-              {
-                inherit (jpetrucciani) rev sha256;
-                owner = "jpetrucciani";
-                repo = "nix";
-              });
         }
       ))
   (prev: next: {

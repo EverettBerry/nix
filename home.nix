@@ -18,6 +18,15 @@ let
     repo = "home-manager";
   };
 
+  jpetrucciani = with builtins; fromJSON (readFile ./sources/jpetrucciani.json);
+  cobi = import (
+    fetchFromGitHub
+      {
+        inherit (jpetrucciani) rev sha256;
+        owner = "jpetrucciani";
+        repo = "nix";
+      });
+
   sessionVariables = {
     EDITOR = "nano";
     HISTCONTROL = "ignoreboth";
@@ -172,7 +181,7 @@ with pkgs.hax; {
         nix_hash_hm
 
         # sounds
-        hax.cobi.hax.meme_sounds
+        cobi.hax.meme_sounds
 
         (writeShellScriptBin "hms" ''
           ${pkgs.git}/bin/git -C ~/.config/nixpkgs/ pull origin main

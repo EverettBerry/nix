@@ -183,11 +183,6 @@ with pkgs.hax; {
 
         # sounds
         cobi.meme_sounds
-
-        (writeShellScriptBin "hms" ''
-          ${pkgs.git}/bin/git -C ~/.config/nixpkgs/ pull origin main
-          home-manager switch
-        '')
       ];
   };
 

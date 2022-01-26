@@ -1,6 +1,6 @@
 let
   pkgs = import ./default.nix { };
-  inherit (pkgs.hax) isDarwin isLinux isM1 isNixOs isUbuntu isAndroid fetchFromGitHub cobi;
+  inherit (pkgs.hax) isDarwin isLinux isM1 isNixOs isUbuntu isAndroid fetchFromGitHub;
 
   firstName = "everett";
   lastName = "berry";

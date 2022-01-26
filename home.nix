@@ -19,13 +19,13 @@ let
   };
 
   jpetrucciani = with builtins; fromJSON (readFile ./sources/jpetrucciani.json);
-  cobi = import (
-    fetchFromGitHub
-      {
-        inherit (jpetrucciani) rev sha256;
-        owner = "jpetrucciani";
-        repo = "nix";
-      });
+  cobi = import (fetchFromGitHub
+    {
+      inherit (jpetrucciani) rev sha256;
+      owner = "jpetrucciani";
+      repo = "nix";
+    }
+    { });
 
   sessionVariables = {
     EDITOR = "nano";

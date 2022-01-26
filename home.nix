@@ -175,6 +175,7 @@ with pkgs.hax; {
         cobi.general_bash_scripts
         cobi.docker_bash_scripts
         cobi.k8s_bash_scripts
+        cobi.hax.comma
 
         # overlays
         nix_hash_unstable

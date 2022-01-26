@@ -171,10 +171,10 @@ with pkgs.hax; {
         kubectx
 
         # load in my custom checked bash scripts
-        # cobi.hax.aws_bash_scripts
-        # cobi.hax.general_bash_scripts
-        # cobi.hax.docker_bash_scripts
-        # cobi.hax.k8s_bash_scripts
+        cobi.aws_bash_scripts
+        cobi.general_bash_scripts
+        cobi.docker_bash_scripts
+        cobi.k8s_bash_scripts
 
         # overlays
         nix_hash_unstable

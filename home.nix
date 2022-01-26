@@ -182,7 +182,7 @@ with pkgs.hax; {
         nix_hash_hm
 
         # sounds
-        cobi.hax.meme_sounds
+        cobi.meme_sounds
 
         (writeShellScriptBin "hms" ''
           ${pkgs.git}/bin/git -C ~/.config/nixpkgs/ pull origin main

@@ -218,7 +218,6 @@ with pkgs.hax; {
       HISTCONTROL=ignoreboth
       set +h
       # fix for weird ubuntu error
-      export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
       export PATH="$PATH:$HOME/.bin/"
       export PATH="$PATH:$HOME/.npm/bin/"
 

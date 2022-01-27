@@ -113,6 +113,7 @@ with pkgs.hax; {
         pup
         ranger
         re2c
+        redshift
         ripgrep
         ripgrep-all
         rlwrap
@@ -127,6 +128,7 @@ with pkgs.hax; {
         swaks
         time
         tealdeer
+        tmux
         unzip
         watch
         wget

@@ -1,5 +1,6 @@
 name: check for nixpkgs-unstable updates
-on: {workflow_dispatch, schedule: [cron: '0 0 * * *']}
+# on: {workflow_dispatch, schedule: [cron: '0 0 * * *']}
+on: {workflow_dispatch}
 jobs:
   nixpkgs:
     uses: EverettBerry/nix/.github/workflows/check_update.yml@main

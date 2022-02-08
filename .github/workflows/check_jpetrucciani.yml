@@ -1,5 +1,6 @@
 name: check for jpetrucciani updates
-on: {workflow_dispatch, schedule: [cron: '0 2 * * *']}
+# on: {workflow_dispatch, schedule: [cron: '0 2 * * *']}
+on: {workflow_dispatch}
 jobs:
   jpetrucciani:
     uses: EverettBerry/nix/.github/workflows/check_update.yml@main

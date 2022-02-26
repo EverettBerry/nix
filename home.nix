@@ -103,6 +103,7 @@ with pkgs.hax; {
         man-pages
         moreutils
         nano
+        nodejs
         ncdu
         neofetch
         netcat-gnu
